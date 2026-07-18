@@ -6,26 +6,68 @@
       }
     
     body {
+        background-color: #f6fad0;
         font-family: Arial, sans-serif;
         color: #3B2B20;
+    }
+
+    nav {
+      background-color: #f55252;
+      color: #fff8ff;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 26px;
+      padding: 26px 34px;
+    }
+
+    nav > a {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #fff8E7;
+      text-decoration: none;
+    }
+
+    .links-nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
 
     footer {
       background-color: #8B3A3A;
       color: #fff8E7;
       font-family: Georgia, serif;
-      font-size: 14px;
-      text-align: center;
+      margin-top: 32px;
+      padding: 24px 0 16px;
 
-       width: 100%;
     }
-      .endereco {
-  
-      bottom: 45;
-      left: 0;
-      width: 100%;
-      background-color: #FDEBD3;
-      text-align: center;
-    }
-
     
+    footer > div {
+      display: flex;
+      gap: 24px;
+
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    footer section {
+      flex-grow: 1;
+    }
+    
+    footer iframe {
+      width: 100%;
+    }
+
+    footer > p {
+      text-align: center;
+    }
+    
+    .image-container {
+      display: flex;
+      justify-content: center;
+    }
