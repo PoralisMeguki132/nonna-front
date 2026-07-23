@@ -1,6 +1,6 @@
 
    h1 { 
-        color: crimson;
+        color: #f55252;
         font-family: Georgia, serif;
         font-size: 48px;      
       }
@@ -9,6 +9,15 @@
         background-color: #f6fad0;
         font-family: Arial, sans-serif;
         color: #3B2B20;
+
+        margin-top: 0;
+        margin-bottom: 0;
+
+        max-width: 1100px;
+        margin: 0 auto;
+
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     nav {
@@ -17,6 +26,7 @@
 
       display: flex;
       justify-content: space-between;
+      border-radius: 10px;
       gap: 26px;
       padding: 26px 34px;
     }
@@ -44,6 +54,7 @@
       font-family: Georgia, serif;
       margin-top: 32px;
       padding: 24px 0 16px;
+      border-radius: 10px;
 
     }
     
@@ -70,4 +81,55 @@
     .image-container {
       display: flex;
       justify-content: center;
+    }
+    
+    input:focus,
+    select:focus,
+    textarea:focus {
+      background-color: #ffebb6
+    }
+
+    .botao-reserva {
+      background-color: #c44646;
+      border-radius: 30px;
+      border-style:double ;
+      color: #b30101;
+      text-decoration: none;
+
+      padding: 18px 22px;
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+    }
+
+    .botao-reserva:hover {
+      transform:scale(1.2);
+      background-color: #a02f2f;
+      color: #6e0000
+    }
+
+    .botao-inicio {
+      background-color: #c44646;
+      border-radius: 30px;
+      border-style:double ;
+      color: #b30101;
+      text-decoration: none;
+
+      padding: 18px 22px;
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+    }
+
+    .botao-inicio:hover {
+      transform:scale(1.1);
+      background-color: #a02f2f;
+      color: #6e0000
+    }
+
+    .cardapio-img {
+      width: 130px;
+      height: 110px;
+      object-fit: cover;
+      flex-shrink: 0;
     }
