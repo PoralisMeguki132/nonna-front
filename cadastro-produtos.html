@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">Cantina da Nonna</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav me-md-auto me-lg-0 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cardapio.html">Cardápio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reserva.html">Reserva</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="cadastro-produtos.html">Cadastro de
+                            Produtos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <h1>Cadastro de Produtos</h1>
+        <p>Formulario para cadastrar produtos no cardápio.</p>
+        <form>
+            <div class="row">
+                <div class="col-md-2 col-sm-12 mb-3">
+                    <label for="nome-produto" class="form-label">Nome do produto</label>
+                    <input type="text" class="form-control" id="nome-produto" aria-describedby="nome-produto-help">
+                    <div id="nome-produto-help" class="form-text">Nome do produto a ser cadastrado</div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <label for="descricao-produto" class="form-label">Descrição</label>
+                    <input type="text" class="form-control" id="descricao-produto"
+                        aria-describedby="descricao-produto-help">
+                    <div id="descricao-produto-help" class="form-text">Descrição do produto a ser cadastrado</div>
+                </div>
+
+                <div class="col-md-3 col-sm-12 mb-3">
+                    <label for="valor-produto" class="form-label">Valor</label>
+                    <input type="number" class="form-control" id="valor-produto" aria-describedby="valor-produto-help"
+                        placeholder="R$ 25,00">
+                    <div id="valor-produto-help" class="form-text">Valor do produto em Reais a ser cadastrado</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 col-sm-12 mb-3">
+                        <label for="imagem-produto" class="form-label">Imagem:</label>
+                        <input class="form-control" type="file" id="imagem-produto"
+                            aria-describedby="imagem-produto-help">
+                        <div id="imagem-produto-help" class="form-text">Imagem do produto a ser cadastrado</div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 mb-3">
+                        <label for="categoria-produto" class="form-label">Categoria:</label>
+                        <select class="form-select" id="categoria-produto" aria-label="Default select example"
+                            aria-describedby="categoria-produto-help">
+                            <option selected>Selecione a categoria</option>
+                            <option value="massas">Massas</option>
+                            <option value="pizzas">Pizzas</option>
+                            <option value="entradas">Entradas</option>
+                            <option value="bebidas">Bebidas</option>
+                            <option value="sobremesas">Sobremesas</option>
+                        </select>
+                        <div id="categoria-produto-help" class="form-text">Categoria do protudo a ser cadastrado</div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
