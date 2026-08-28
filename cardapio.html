@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <!-- 
+<!-- 
         Não se esqueça:
         Abriu uma tag, Tem que fechar! 
     -->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cantina da Nonna</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/style/index.css">
-    </head>
-    <body>
-        <nav>
-            <a href="index.html">Cantina da Nonna</a>
 
-            <div class="links-nav">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantina da Nonna</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="public/style/index.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Cantina da Nonna</a>
+
+        <div class="links-nav">
             <a href="index.html">Inicio</a>
             <a href="cardapio.html">Cardápio</a>
             <a href="reserva.html">Reserva</a>
             <a href="cadastro-produtos.html">Cadastro de Produtos</a>
             <a style=color:black href="test.html">Teste</a>
-            </div>
-        </nav>
-        <main class="container mt-4">
-            <h1>Cardápio</h1>
+        </div>
+    </nav>
+    <main class="container mt-4">
+        <h1>Cardápio</h1>
 
-            <div class="row">
+        <div class="d-flex mb-4 gap-2">
+            <button class="btn btn-small btn-outline-secondary">Todos</button>
+            <button class="btn btn-small btn-outline-secondary">Massas</button>
+            <button class="btn btn-small btn-outline-secondary">Pizzas</button>
+        </div>
+
+        <div class="row">
 
             <div class="col-md-3 mb-3 col-md-6 col-sm-12 item">
                 <div class="border rounded p-3 h-100 d-flex flex-column">
                     <div class="d-flex justify-contente between align-items-start gap-3">
                         <div>
                             <h5>Fettucine ao molho branco</h5>
-                            <p class="text-muted small">Massa fresca ao molho de creme de leite com parmesão relato na hora e toque de noz-moscada.</p>
+                            <p class="text-muted small">Massa fresca ao molho de creme de leite com parmesão relato na
+                                hora e toque de noz-moscada.</p>
                         </div>
-                        <img src="public/images/Fettuccine.jpg" alt="Fettucine ao molho branco" class="cardapio-img rounded">
-                    
+                        <img src="public/images/Fettuccine.jpg" alt="Fettucine ao molho branco"
+                            class="cardapio-img rounded">
+
                     </div>
                     <p class="mt-auto mb-0 pt-3">R$ 42,00</p>
                 </div>
@@ -47,10 +59,12 @@
                     <div class="d-flex justify-contente between align-items-start gap-3">
                         <div>
                             <h5>Pizza de Margherita</h5>
-                            <p class="text-muted small">Pizza no forno a lenha com molho de tomate artesanal, mussarela fresca e folhas de manjericão.</p>
+                            <p class="text-muted small">Pizza no forno a lenha com molho de tomate artesanal, mussarela
+                                fresca e folhas de manjericão.</p>
                         </div>
-                        <img src="public/images/pizzamargherita.jpg" alt="Pizza de Margherita" class="cardapio-img rounded">
-                    
+                        <img src="public/images/pizzamargherita.jpg" alt="Pizza de Margherita"
+                            class="cardapio-img rounded">
+
                     </div>
                     <p class="mt-auto mb-0 pt-3">R$ 55,00</p>
                 </div>
@@ -61,10 +75,11 @@
                     <div class="d-flex justify-contente between align-items-start gap-3">
                         <div>
                             <h5>Pizza de Salame</h5>
-                            <p class="text-muted small">Salame artesanal fatiado acompanhado de queijo colonial da região, servido com pão caseiro.</p>
+                            <p class="text-muted small">Salame artesanal fatiado acompanhado de queijo colonial da
+                                região, servido com pão caseiro.</p>
                         </div>
                         <img src="public/images/pizzasalame.webp" alt="Pizza de Salame" class="cardapio-img rounded">
-                    
+
                     </div>
                     <p class="mt-auto mb-0 pt-3">R$ 38,00</p>
                 </div>
@@ -75,10 +90,11 @@
                     <div class="d-flex justify-contente between align-items-start gap-3">
                         <div>
                             <h5>Polenta</h5>
-                            <p class="text-muted small">Polenta cremosa servida com fortaia — omelete de ovos caipiras — prato típico da cozinha ítalo-gauchesca.</p>
+                            <p class="text-muted small">Polenta cremosa servida com fortaia — omelete de ovos caipiras —
+                                prato típico da cozinha ítalo-gauchesca.</p>
                         </div>
                         <img src="public/images/Polenta.webp" alt="Polenta" class="cardapio-img rounded">
-                    
+
                     </div>
                     <p class="mt-auto mb-0 pt-3">R$ 35,00</p>
                 </div>
@@ -89,21 +105,27 @@
                     <div class="d-flex justify-contente between align-items-start gap-3">
                         <div>
                             <h5>Vinho Goethe</h5>
-                            <p class="text-muted small">Vinho branco da uva Goethe, cultivada em Urussanga/SC. Aroma floral, sabor suave e levemente ácido.</p>
+                            <p class="text-muted small">Vinho branco da uva Goethe, cultivada em Urussanga/SC. Aroma
+                                floral, sabor suave e levemente ácido.</p>
                         </div>
                         <img src="public/images/vinhogoethe.webp" alt="Vinho Goethe" class="cardapio-img rounded">
-                    
+
                     </div>
                     <p class="mt-auto mb-0 pt-3">R$ 25,00</p>
                 </div>
             </div>
-        </main>
+    </main>
 
-            <a class="botao-reserva" href="reserva.html">Reservar mesa</a>
-     <p> Clique <a href="/">Aqui</a> para voltar</p>
-     <footer>
-          <p>&copy; 2026 Cantina da Nonna.</p>
-      </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    </body>
+    <a class="botao-reserva" href="reserva.html">Reservar mesa</a>
+    <p> Clique <a href="/">Aqui</a> para voltar</p>
+    <footer>
+        <p>&copy; 2026 Cantina da Nonna.</p>
+    </footer>
+
+    <script> src="public/scripts/cardapio.js" </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

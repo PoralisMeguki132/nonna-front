@@ -23,8 +23,10 @@
             <a style=color:black href="test.html">Teste</a>
             </div>
         </nav>
-    <h1>Reserva de mesa</h1>
+    <h1 id="id-titulo" class="c-titulo">Reserva de mesa</h1>
     <p>Preencha os dados abaixo para simular uma reserva na Cantina da Nonna.</p>
+
+    
 
     <form>
         <fieldset>
@@ -87,7 +89,7 @@
             <input type="checkbox" id="confirmacao" nome="confirmacao" required>
             <label for="confirmacao">Confirmo que os dados da reserva estão corretos</label>
         </p>
-        <button type="submit">Enviar reserva</button>
+        <button id="envio-reserva" type="submit">Enviar reserva</button>
         <button type="reset">Limpar formulário</button>
     </form>
 
@@ -98,5 +100,30 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5872.368703157!2d-49.462222214624624!3d-28.936025762610708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95222f25bff7ac0f%3A0xaf00e058b5749c78!2sMercado%20Popular!5e0!3m2!1spt-BR!2sbr!4v1784248093866!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         <p>&copy; 2026 Cantina da Nonna.</p>
     </footer>
+
+    <script>
+        // static void exemplo(){}
+        function exemploFuncao(){
+            // Pegar o título dessa pagina
+            // Pegar o Titulo dessa página e alterar para "Exemplo aula Javascript"
+            // tag document.querySelector("h1")
+            // id document.querySelector("#id=titulo")
+            // classe document.querySelector(".c-titulo")
+            let titulo = document.querySelector("#id-titulo")
+            titulo.textContent = "Exemplo aula Javascript"
+        }
+
+        // System.out.println("Olá mundo!"); = *codigo abaixo*
+        console.log("Olá mundo!")
+        let botao = document.querySelector("#envio-reserva")
+        botao.addEventListener("click", exemploFuncao)
+        // exemploFuncao()
+        // Capturar o evento ao clicar no botão "Enviar reservar"
+        /* botao.addEventListener("click", function(){}*/
+
+
+
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
