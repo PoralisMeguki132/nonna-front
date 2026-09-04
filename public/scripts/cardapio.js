@@ -1,1 +1,4 @@
-console.log("Outra coisa");
+async function carregarCardapio(){
+
+    //Pegar os dados no banco
+}
