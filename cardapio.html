@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!-- 
-        Não se esqueça:
-        Abriu uma tag, Tem que fechar! 
-    -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cantina da Nonna</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="public/style/index.css">
 </head>
 
@@ -20,109 +15,70 @@
         <a href="index.html">Cantina da Nonna</a>
 
         <div class="links-nav">
-            <a href="index.html">Inicio</a>
+            <a href="index.html">Início</a>
             <a href="cardapio.html">Cardápio</a>
             <a href="reserva.html">Reserva</a>
-            <a href="cadastro-produtos.html">Cadastro de Produtos</a>
-            <a style=color:black href="test.html">Teste</a>
         </div>
     </nav>
+
     <main class="container mt-4">
         <h1>Cardápio</h1>
 
-        <div class="d-flex mb-4 gap-2">
-            <button class="btn btn-small btn-outline-secondary">Todos</button>
-            <button class="btn btn-small btn-outline-secondary">Massas</button>
-            <button class="btn btn-small btn-outline-secondary">Pizzas</button>
+        <div class="d-flex mb-4 gap-2" id="filtro">
+            <button class="btn btn-small btn-outline-secondary" data-filtro="todos">Todos</button>
+            <button class="btn btn-small btn-outline-secondary" data-filtro="massas">Massas</button>
+            <button class="btn btn-small btn-outline-secondary" data-filtro="pizzas">Pizzas</button>
+            <button class="btn btn-small btn-outline-secondary" data-filtro="vinhos">Vinhos</button>
+            <button class="btn btn-small btn-outline-secondary" data-filtro="entradas">Entradas</button>
         </div>
 
-        <div class="row">
+        <div class="row" id="cardapio"></div>
 
-            <div class="col-md-3 mb-3 col-md-6 col-sm-12 item">
-                <div class="border rounded p-3 h-100 d-flex flex-column">
-                    <div class="d-flex justify-contente between align-items-start gap-3">
-                        <div>
-                            <h5>Fettucine ao molho branco</h5>
-                            <p class="text-muted small">Massa fresca ao molho de creme de leite com parmesão relato na
-                                hora e toque de noz-moscada.</p>
-                        </div>
-                        <img src="public/images/Fettuccine.jpg" alt="Fettucine ao molho branco"
-                            class="cardapio-img rounded">
-
+        <div class="modal fade" id="apagarProdutoModal" tabindex="-1" aria-labelledby="apagarProdutoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="apagarProdutoModalLabel"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-Label="Close"></button>
                     </div>
-                    <p class="mt-auto mb-0 pt-3">R$ 42,00</p>
+                    <div class="modal-body" id="apagarProdutoModalCorpo"></div>
+                    <div class="modal-footer">
+                        <img class="reload-img" src="/public/images/reload.gif" alt="Recarregar" hidden="true" id="elementoBotaoImagemRecarregar"/>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="apagarProdutoModalCancelar">Cancelar</button>
+                        <button type="button" class="btn btn-danger" id="apagarProdutoModalConfirmar">Confirmar</button>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-md-3 mb-3 col-md-6 col-sm-12 item">
-                <div class="border rounded p-3 h-100 d-flex flex-column">
-                    <div class="d-flex justify-contente between align-items-start gap-3">
-                        <div>
-                            <h5>Pizza de Margherita</h5>
-                            <p class="text-muted small">Pizza no forno a lenha com molho de tomate artesanal, mussarela
-                                fresca e folhas de manjericão.</p>
-                        </div>
-                        <img src="public/images/pizzamargherita.jpg" alt="Pizza de Margherita"
-                            class="cardapio-img rounded">
-
-                    </div>
-                    <p class="mt-auto mb-0 pt-3">R$ 55,00</p>
-                </div>
-            </div>
-
-            <div class="col-md-3 mb-3 col-md-6 col-sm-12 item">
-                <div class="border rounded p-3 h-100 d-flex flex-column">
-                    <div class="d-flex justify-contente between align-items-start gap-3">
-                        <div>
-                            <h5>Pizza de Salame</h5>
-                            <p class="text-muted small">Salame artesanal fatiado acompanhado de queijo colonial da
-                                região, servido com pão caseiro.</p>
-                        </div>
-                        <img src="public/images/pizzasalame.webp" alt="Pizza de Salame" class="cardapio-img rounded">
-
-                    </div>
-                    <p class="mt-auto mb-0 pt-3">R$ 38,00</p>
-                </div>
-            </div>
-
-            <div class="col-md-3 mb-3 col-md-6 col-sm-12 item">
-                <div class="border rounded p-3 h-100 d-flex flex-column">
-                    <div class="d-flex justify-contente between align-items-start gap-3">
-                        <div>
-                            <h5>Polenta</h5>
-                            <p class="text-muted small">Polenta cremosa servida com fortaia — omelete de ovos caipiras —
-                                prato típico da cozinha ítalo-gauchesca.</p>
-                        </div>
-                        <img src="public/images/Polenta.webp" alt="Polenta" class="cardapio-img rounded">
-
-                    </div>
-                    <p class="mt-auto mb-0 pt-3">R$ 35,00</p>
-                </div>
-            </div>
-
-            <div class="col-md-3 mb-3 col-md-6 col-sm-12 item">
-                <div class="border rounded p-3 h-100 d-flex flex-column">
-                    <div class="d-flex justify-contente between align-items-start gap-3">
-                        <div>
-                            <h5>Vinho Goethe</h5>
-                            <p class="text-muted small">Vinho branco da uva Goethe, cultivada em Urussanga/SC. Aroma
-                                floral, sabor suave e levemente ácido.</p>
-                        </div>
-                        <img src="public/images/vinhogoethe.webp" alt="Vinho Goethe" class="cardapio-img rounded">
-
-                    </div>
-                    <p class="mt-auto mb-0 pt-3">R$ 25,00</p>
-                </div>
-            </div>
+        </div>
+            
+    
     </main>
 
-    <a class="botao-reserva" href="reserva.html">Reservar mesa</a>
-    <p> Clique <a href="/">Aqui</a> para voltar</p>
+    <a class="botao-cadastro-produto" onClick="mostrarCadastroProdutos()">Criar produto</a>
+
     <footer>
+        <div>
+            <section>
+                <h2>Contato</h2>
+                <p>Telefone: <a href="https://wa.me/5548987654321" target="_blank">(48) 9 8765 - 4321</a></p>
+                <p>email: <a href="mailto:contato@nonna.com.br">contato@nonna.com.br</a></p>
+                <p>Instragram: <a href="https://instagram.com.br/nonna">@nonna</a></p>
+            </section>
+            <section>
+                <h2>Localização</h2>
+                <p>Rua das Oliveiras, 120</p>
+                <p>Centro - Araranguá/SC</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13966.543414224649!2d-49.49170902969789!3d-28.938859202589764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95222edfcf15aaad%3A0xff24219d9974bb61!2sSenac%20Ararangu%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1784248086985!5m2!1spt-BR!2sbr"
+                    width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </section>
+        </div>
+
         <p>&copy; 2026 Cantina da Nonna.</p>
     </footer>
 
-    <script> src="public/scripts/cardapio.js" </script>
+    <script src="public/scripts/cardapio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
